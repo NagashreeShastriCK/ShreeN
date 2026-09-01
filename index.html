@@ -562,6 +562,404 @@
             font-size: 13px;
         }
     }
+    /* =========================================
+   FINAL PORTFOLIO POLISH
+   ========================================= */
+
+
+/* ---------- GENERAL ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.nav-links a {
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+
+/* ---------- EXPERIENCE ---------- */
+
+.experience {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.experience-content {
+    max-width: 1100px;
+}
+
+.experience-list {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.experience-item {
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(6px);
+}
+
+
+/* ---------- EDUCATION ---------- */
+
+.education {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.education-content {
+    max-width: 1100px;
+}
+
+.education-timeline {
+    max-width: 900px;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.projects {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.projects-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-card {
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* ---------- SKILLS ---------- */
+
+.skills {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.skills-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ---------- CERTIFICATIONS ---------- */
+
+.certifications {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.certifications-content {
+    max-width: 1100px;
+}
+
+
+/* ---------- INTERESTS ---------- */
+
+.interests {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.interests-content {
+    max-width: 1100px;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    min-height: 65vh;
+}
+
+.contact-details a {
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+.contact-details a:hover {
+    transform: translateY(-3px);
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-content,
+    .education-content,
+    .projects-content,
+    .skills-content,
+    .certifications-content,
+    .interests-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Navigation */
+
+    header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex: 1;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        flex-shrink: 0;
+        font-size: 13px;
+    }
+
+
+    /* General section spacing */
+
+    .about,
+    .skills,
+    .projects,
+    .experience,
+    .education,
+    .certifications,
+    .interests,
+    .contact {
+        padding: 85px 24px;
+        box-sizing: border-box;
+    }
+
+
+    /* Headings */
+
+    .about h2,
+    .skills h2,
+    .projects h2,
+    .experience h2,
+    .education h2,
+    .certifications h2,
+    .contact h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .interests h2 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+
+    /* Skills */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* Projects */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .project-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Experience */
+
+    .experience-list {
+        width: 100%;
+    }
+
+    .experience-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+
+
+    /* Education */
+
+    .education-timeline {
+        width: 100%;
+    }
+
+    .education-item {
+        padding-left: 45px;
+    }
+
+    .education-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Certifications */
+
+    .certificate-item {
+        grid-template-columns: 55px 1fr;
+        gap: 10px;
+        padding: 25px 0;
+    }
+
+    .certificate-item h3 {
+        font-size: 19px;
+    }
+
+    .certificate-item p {
+        font-size: 15px;
+    }
+
+
+    /* Interests */
+
+    .interest-words {
+        gap: 16px 22px;
+    }
+
+    .interest-words span {
+        font-size: 21px;
+    }
+
+    .interest-words span:nth-child(2),
+    .interest-words span:nth-child(5) {
+        font-size: 27px;
+    }
+
+
+    /* Contact */
+
+    .contact-text {
+        font-size: 16px;
+    }
+
+    .contact-details {
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 14px 15px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .experience,
+    .education,
+    .certifications,
+    .interests,
+    .contact {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .about h2,
+    .skills h2,
+    .projects h2,
+    .experience h2,
+    .education h2,
+    .certifications h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .interests h2 {
+        font-size: 34px;
+    }
+
+}
     </style>
 </head>
 
